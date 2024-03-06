@@ -41,3 +41,13 @@ docker-compose up
 docker-compose down // deletes container
 docker-compose down --rmi all -v // also deletes images and volumes
 ```
+
+## docker hub
+```
+cd api
+docker build -t bpospanov/myapi .
+docker login
+docker push bpospanov/myapi:tagname
+docker pull bpospanov/myapi:latest
+docker run --name myapi_c -p 4000:4000 -d bpospanov/myapi
+```
