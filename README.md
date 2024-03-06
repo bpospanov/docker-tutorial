@@ -28,3 +28,9 @@ docker image rm myapp2 -f // force to remove image without deleting containers
 docker container rm myapp_c2  // delete container
 docker system prune -a  // remove all containers, images and volumes
 ```
+
+```
+docker-compose up
+docker-compose down // deletes container
+docker-compose down --rmi all -v // also deletes images and volumes
+```
